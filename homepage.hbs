@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>login page</title>
+    <link rel="script" href="/controllers/users.js">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="icon" href="image/plug-solid.svg">
+</head>
+<body>
+    {{!-- <div id="load">
+        
+    </div> --}}
+    <!--Header section-->
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="login page.html"> <img src="image/EV-removebg.png" alt="EV Mart" class="Logo"></a>
+     <nav class="navbar">
+      <a href="login page.html">Home</a>
+      <a href="#">Information</a>
+      <a href="#">Services</a>
+      <a href="#footer">Contact</a>
+     <!-- <div id="drop-btn" class="fa-solid fa-caret-down"></div> -->
+    </div>
+     </nav>
+     <div id="Button">
+        <form action="/auth/homepage" method="post">
+      <button class="book" onclick="logout()">Log-out</button>
+      <a href="Profile page.html"><i class="fas fa-user"></i></a><small id="small"></small>
+      
+      </form>
+      
+     </div>
+    </header>
+       <!--Header section-->
+
+       <!--Featured vehicles-->
+       <section class="services" id="services">
+        <h1 class="heading">featured <span>vehicles</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <h3>OLA S1</h3>
+                <img src="EV mart/OlA.png" alt="">
+                <p>With Mission Electric , we pledge to reject petrol and commit to electric vehicles by making sure no petrol two-wheelers are sold in India after 2025. At the heart of Ola Electric is our vision to reduce global emissions and fossil fuel dependency by making India the epic centre of electrification. we aim to not just make electric vehicles but engineer a change in the mindsets of every Indian, a change that powers the vision behind Mission Electric.</p>
+                <a href="#" class="book">test ride</a>
+                <a href="#" class="book">order now</a>
+            </div>
+
+            <div class="box">
+                <h3>Hero electric</h3>
+                <img src="EV mart/Hero electric.png" alt="" id="hero">
+                <p>HERO ELECTRIC is a pioneer and market leader in the Indian Electric Two-Wheeler industry. We have been the front runner for Electric Mobility in India for over a decade. We believe in offering an ecological 2-wheeler solution to our consumers, which above all else, gives our customers excellent value for money. Hero Electric’s endeavour to make the country greener with ‘Zero Pollution’ transportation through its wide range of Electric Vehicles, is supported by our Mission of “No Emission”.</p>
+                <a href="#" class="book">test ride</a>
+                <a href="#" class="book">order now</a>
+            </div>
+
+            <div class="box">
+                <h3>Revolt</h3>
+                <img src="EV mart/Revolt.png" alt="">
+                <p>Revolt Motors is the next-gen mobility company, created for the smart world. With technology at its roots and a class-apart product in the works, Revolt has introduced India’s first AI-enabled motorcycle without compromising on the performance or aesthetics of a regular ride.Democratising clean commute using next-gen mobility solutions. To create a future of next-gen mobility with 100% accessibility and 0% fuel residue. </p>
+                <a href="#" class="book">test ride</a>
+                <a href="#" class="book">order now</a>
+            </div>
+
+            <div class="box">
+                <h3>Ather</h3>
+                <img src="EV mart/Ather.png" alt="Ather" id="ather">
+                <p>The automobile industry is in the midst of a huge technological disruption. Today, electric is the preferred choice because of its inherent efficiency that will shape urban commute and the cities of tomorrow. In parallel, the world around us is getting connected, enabling integration of devices and making our life experiences seamless. Intelligent vehicles will revolutionize our commute experience in the future and the Ather 450 stands at the cusp of this exciting reality.</p>
+                <a href="#" class="book">test ride</a>
+                <a href="#" class="book">order now</a>
+            </div>
+
+            <div class="box">
+                <h3>Ampere</h3>
+                <img src="EV mart/ampere-removebg-preview.png" alt="Ampere">
+                <p>#NewAgeEnergy is more than just words,
+                    it powers Ampere’s dreams of a better future, a greener environment, and a healthier planet
+                    
+                    Each day we make sustainable mobility more accessible by evolving to the needs of our riders and our planet.With the foresight and passion to revolutionise everyday mobility. We realised our dream of a sustainable future and set in motion a chain of events that would later bring Eco-Friendly Mobility within everyone's grasp.
+                    </p>
+                <a href="#" class="book">test ride</a>
+                <a href="#" class="book">order now</a>
+            </div>
+
+            <div class="box">
+                <h3>okinawa</h3>
+                <img src="EV mart/ipraiseplus-home-banner-removebg-preview.png" alt="okinawa">
+                <p>We believe in moving forward without leaving Mother Nature behind. We’re here to nurture a lifestyle that isn’t just rich from the outside, but has deeper values rooted within it, a lifestyle that believes in giving back to the nature. We think out of the box, bring the best solution for all our stakeholders. Being ethical, fair and transparent in what we do.  We believe in open communication and give due regard to feelings and opinion of others.</p>
+                <a href="#" class="book">test ride</a>
+                <a href="#" class="book">order now</a>
+            </div>
+        </div>
+      </section>
+      <!--Featured vehicles-->
+
+      <section class="footer" id="footer">
+        <div class="box-container">
+    <div class="box">
+        <h3>our branches</h3>
+            <a href="#"><i class="fas fa-map-marker-alt"></i>india</a>
+            {{!-- <a href="#"><i class="fas fa-map-marker-alt"></i>france</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i>africa</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i>russia</a> --}}
+    </div>
+    
+    <div class="box">
+        <h3>quick links</h3>
+            <a href="#"><i class="fas fa-arrow-right"></i>home</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>vehicles</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>services</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>contact</a>
+            <a href="#"><i class="fas fa-arrow-right"></i>information</a>
+    </div>
+    
+    <div class="box">
+        <h3>contact details</h3>
+            <a href="#"><i class="fas fa-phone"></i>+91-7904925991</a>
+            <a href="#"><i class="fas fa-phone"></i>+91-6374505526</a>
+            <a href="mailto:jeevaaravinth2001@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>jeevaaravinth2001@gmail.com</a>
+            <a href="mailto:electricveemart@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></i>electricveemart@gmail.com</a>
+    </div>
+    
+    <div class="box">
+        <h3>Social media</h3>
+            <a href="https://www.facebook.com/profile.php?id=100090281825277&sk=about" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+            <a href="https://twitter.com/EVMart2023" target="_blank"><i class="fab fa-twitter"></i>twitter</a>
+            <a href="https://www.instagram.com/ev_mart2022" target="_blank"><i class="fab fa-instagram"></i>instagram</a>
+            <a href="https://www.linkedin.com/in/ev-mart-526859265/" target="_blank"><i class="fab fa-linkedin"></i>linkedin</a>
+    </div>
+        </div>
+        <div class="credit">
+            created by mr.jeeva aravinth j v | EV Mart
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+    function logout(){
+        alert("Are you sure to log-out?");
+    }
+
+
+    window.onscroll= () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+    }
+    else    {
+        document.querySelector('.header').classList.remove('active');
+    }
+}
+
+window.onload= () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+    }
+    else    {
+        document.querySelector('.header').classList.remove('active');
+    }
+}
+
+
+        var swiper = new Swiper(".vehicles-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop:true,
+    grabCursor:true,
+    centeredSlides:true,
+    autoplay:{
+        delay:2500,
+        disableOnInteraction:false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        
+      },
+      800: {
+        slidesPerView: 2,
+        
+      },
+
+      991: {
+        slidesPerView: 3,
+    
+      },
+    },
+  });
+  //slideshow
+    </script>
+</body>
+</html>

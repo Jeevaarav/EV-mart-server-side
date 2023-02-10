@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV mart</title>
+    <link rel="icon" href="/image/plug-solid.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+     <!--login form-->
+    <div class="login-form">
+       
+  <form id="form" name="login-form" action="/auth/login" method="post">
+    <h3>User login</h3>
+    {{#if msg}}
+        <p id="para" class="{{msg_type}}"> ({{msg}})</p>
+        {{/if}}
+
+    <div class="form-control">
+    <input type="email" placeholder="email" class="box" id="email" name="email" onkeyup="validateemail()">
+                  <small id="input-1"></small>
+                </div>
+                <div class="form-control">
+    <input type="password" placeholder="password" class="box" id="password"  name="password" onkeyup="validatepass()">
+    
+    <i class="fa fa-eye-slash" id="togglePassword"></i>
+                  <small id="input-2"></small>
+                </div>
+    <p>forgot your password<a href="#" class="link">click here</a></p>
+    <button type="submit" class="book">Login now</button>
+    <p>don't have an account <a href="/register" target="_self" class="link">create one</a></p>
+  </form>
+    </div>
+     <!--login form-->
+
+     <script>
+      
+//password
+const togglePassword = document.querySelector("#togglePassword");
+const password1 = document.querySelector("#password");
+
+togglePassword.addEventListener('click', function () {
+    // toggle the type attribute
+    const type = password1.getAttribute('type') === 'password' ? 'text' : 'password';
+    password1.setAttribute('type', type);
+    
+    // toggle the icon
+    this.classList.toggle("fa-eye");
+});
+//password
+
+const email=document.getElementById("email");
+const password=document.getElementById("password");
+ const valid = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+function validateemail(){
+  const emailval=email.value;
+  if(emailval==""){
+    email.style.border="2px solid red";
+    document.getElementById("input-1").innerHTML="Email cannot be blank";
+    document.getElementById("input-1").style.color="red";
+  }
+  else if(!valid.test(emailval)){
+    email.style.border="2px solid red";
+    document.getElementById("input-1").innerHTML="Provide Proper Mail ID";
+    document.getElementById("input-1").style.color="red";
+  }
+  else{
+    email.style.border="2px solid green";
+     document.getElementById("input-1").innerHTML="";
+  }
+}
+   function validatepass(){
+         const pass=password.value;
+    if(pass==""){
+        password.style.border="2px solid red";
+        document.getElementById("input-2").innerHTML='Kindly enter password';
+          document.getElementById("input-2").style.color='red';
+       }
+        else if(!PassCheck(password)){
+        password.style.border="2px solid red";
+         document.getElementById("input-2").innerHTML='kindly use Caps,Num,Special characters';
+         document.getElementById("input-2").style.color='red';
+      }
+      else if(pass.length<8){
+        password.style.border="2px solid red";
+         document.getElementById("input-2").innerHTML='Minimum 8 Characters required';
+         document.getElementById("input-2").style.color='red';
+      }
+       else{
+         password.style.border="2px solid green";
+         document.getElementById("input-2").innerHTML='';
+         return numcount++;
+       }
+      
+      function PassCheck(){
+                var count=0,count1=0,count2=0,count3=0;
+                for(i=0;i<pass.length;i++){
+                    const check=pass.charCodeAt(i);
+                    if(check>=65 && check<=90)
+                    {
+                        count++;
+                    }
+                    else if(check>=97 && check<=122)
+                    {
+                        count1++;
+                    }
+                    else if(check>=48 && check<=57) {
+                        count2++;
+                    }
+                    else if((check>=32 && check<=47) || (check>=58 && check<=64) || (check>=91 && check<=96) || (check>=123 && check<=126))
+                    {
+                        count3++;
+                    }
+                }
+                if(count>0 && count1>0 && count2>0 && count3>0)
+                {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+      }
+
+     </script>
+</body>
+</html>

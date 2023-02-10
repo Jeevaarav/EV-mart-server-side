@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="/image/plug-solid.svg">
+    <title>Create new account</title>
+    <link rel="stylesheet" href="/css/register.css">
+    {{!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  --}}
+    {{!-- <link rel="stylesheet" href="/js/register.js"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+{{!-- <div id="loading">
+</div> --}}
+
+    <div class="login-form">
+       
+  <form  action="/auth/register" method="post" id="form" onsubmit="return formsub()">
+    <h3>Create new account</h3>
+     {{#if msg}}
+        <p id="para" class="{{msg_type}}"> ({{msg}})</p>
+        {{/if}}
+    <div class="form-control">
+    <input type="email" placeholder="email" class="box" name="email" id="email" onkeyup="validate()">
+                  <small id="small"></small>
+                </div>
+                <div class="form-control">
+    <input type="password" placeholder="password" class="box" name="password" id="password" onkeyup="validatepass()" >
+    <div>
+      <i class="fa fa-eye-slash" id="togglePassword"></i>
+    </div>
+                  <small id="small1"></small>
+                </div>
+                <div class="form-control">
+                    <input type="password" placeholder="Confirm password" class="box" name="confirm_password" id="confirm_password" onkeyup="validateconfirm()">
+                    <div >
+                      <i class="fa fa-eye-slash" id="togglePassword1"></i>
+                    </div>
+                                  <small id="small2"></small>
+                                </div>
+  <button type="submit" class="book">Register now</button>
+  
+ </form>
+    </div>
+
+    <script>
+      //import swal from 'sweetalert';  
+     // var sweeet=require("sweetalert");
+        const email1=document.getElementById("email");
+        const password=document.getElementById("password");
+        const confirm_pass=document.getElementById("confirm_password");
+        const valid = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        var numcount=0;
+      function validate(){
+        const emai=email1.value;
+        if(emai=="")
+        {
+        email1.style.border="2px solid red";
+        document.getElementById("small").innerHTML='kindly fill email ID';
+        document.getElementById("small").style.color='red';
+        }
+       else if(!valid.test(emai)){
+        email1.style.border="2px solid red";
+        document.getElementById("small").innerHTML='Enter proper mail ID';
+        document.getElementById("small").style.color='red';
+       }
+       else{
+        email1.style.border="2px solid green";
+        document.getElementById("small").innerHTML='';
+        return numcount++;
+       }
+      }
+      function validatepass(){
+         const pass=password.value;
+    if(pass==""){
+        password.style.border="2px solid red";
+        document.getElementById("small1").innerHTML='Kindly enter password';
+          document.getElementById("small1").style.color='red';
+       }
+        else if(!PassCheck(password)){
+        password.style.border="2px solid red";
+         document.getElementById("small1").innerHTML='kindly use Caps,Num,Special characters';
+         document.getElementById("small1").style.color='red';
+      }
+      else if(pass.length<8){
+        password.style.border="2px solid red";
+         document.getElementById("small1").innerHTML='Minimum 8 Characters required';
+         document.getElementById("small1").style.color='red';
+      }
+       else{
+         password.style.border="2px solid green";
+         document.getElementById("small1").innerHTML='';
+         return numcount++;
+       }
+      
+      function PassCheck(){
+                var count=0,count1=0,count2=0,count3=0;
+                for(i=0;i<pass.length;i++){
+                    const check=pass.charCodeAt(i);
+                    if(check>=65 && check<=90)
+                    {
+                        count++;
+                    }
+                    else if(check>=97 && check<=122)
+                    {
+                        count1++;
+                    }
+                    else if(check>=48 && check<=57) {
+                        count2++;
+                    }
+                    else if((check>=32 && check<=47) || (check>=58 && check<=64) || (check>=91 && check<=96) || (check>=123 && check<=126))
+                    {
+                        count3++;
+                    }
+                }
+                if(count>0 && count1>0 && count2>0 && count3>0)
+                {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+      }
+     
+     function formsub(){
+      const numres=numcount;
+      if(numcount>=2){
+       // swal({"User registration successfully","Welcome to EV mart","success","Let's play the game"});
+       alert("User Registration Successfully");
+        return true;
+      }
+      else{
+     //   swal({"Give valid inputs","Click ok","error","ok"});
+        return false;
+      }
+     }
+         const togglePassword1=document.querySelector("#togglePassword1");
+      const confirmi=document.querySelector("#confirm_password");
+
+      togglePassword1.addEventListener('click',function(){
+        const type=confirmi.getAttribute('type')==='password'?'text':'password';
+        confirmi.setAttribute('type',type);
+
+        this.classList.toggle("fa-eye");
+      });
+      const togglePassword2=document.querySelector("#togglePassword");
+      const passwordi=document.querySelector("#password");
+
+      togglePassword2.addEventListener('click',function(){
+        const type=passwordi.getAttribute('type')==='password'?'text':'password';
+        passwordi.setAttribute('type',type);
+
+        this.classList.toggle("fa-eye");
+      });
+        
+       // document.getElementsByTagName("input").style.border-color="red";
+       
+
+
+ //    const email=document.getElementById("email");
+   //  const emailvalue=email.value.trim();
+     //form.addEventListener('submit', e=>{
+       //e.preventDefault();
+    // checkInput();
+  //   });
+    // function checkInput(){
+      // if(emailvalue===''){
+        // setError(email,"Email cannot be blank");
+  //     }
+    //   else{
+      //   setSuccess(email,"");
+      // }
+
+  //     function setError(input, message) {
+    //      const formhead = input.parentElement;
+      //    const paragraph = formhead.querySelector("small");
+        //  formhead.className = "form-control.error";
+      //    paragraph.innerText = message;
+    //  }
+  
+      //function setSuccess(input, message) {
+        //  const formhead = input.parentElement;
+          //const paragraph = formhead.querySelector("small");
+        //  formhead.className = "form-control.success"; 
+         // paragraph.innerText = message;
+      //}
+    // }
+
+//   function EmailValid(){
+//    var email=document.getElementById("email");
+//    var pass=document.getElementById("password");    
+//    var confirm=document.getElementById("confirm_password");
+//    var emailval=email.value;
+//    var passval=pass.value;
+//    var confirmval=confirm.value;
+
+//    if(emailval===""){
+//      alert("email cannot be blank")
+ //   }
+//    else if(passval===""){
+//      alert("password cannot be blank");
+//    }
+//   }
+    </script>
+</body>
+</html>

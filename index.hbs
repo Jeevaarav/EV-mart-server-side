@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/image/plug-solid.svg">
+    <title>EV Mart</title>
+  <link rel="stylesheet" href="/css/credentials.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js" integrity="sha512-5BqtYqlWfJemW5+v+TZUs22uigI8tXeVah5S/1Z6qBLVO7gakAOtkOzUtgq6dsIo5c0NJdmGPs0H9I+2OHUHVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <!--Loading-->
+
+{{!-- <div id="load">
+</div> --}}
+    <!--header section-->
+    <section>
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+      <img src="/image/EV-removebg.png" alt="EV Mart" class="Logo" title="Logo">
+     <nav class="navbar">
+     <div id="drop-btn" class="fa-solid fa-caret-down"></div>
+    <div class="unlist">
+        <ul class="information">
+            <li><a>ola</a></li>
+            <li><a>jeeva</a></li>
+            <li><a>mani</a></li>
+        </ul>
+    </div>
+     </nav>
+     <div id="Button">
+        <form action="/auth/index" method="post">
+      <button class="book">Login</button>
+      </form>
+      <i class="fa-solid fa-person-biking"></i>
+     </div>
+    </header>
+</section>
+    <!--header section-->
+   
+     <!--Home section-->
+     <section id="home" class="home">
+        <h1 class="home-parallax" data-speed="-2">Find your vehicle</h1>
+        <img class="home-parallax"  src="/EV mart/Find your vehicle.jpg" alt="OLA" data-speed="5" title="EV mart">
+        <form action="/auth/index" method="post">
+        <button class="book">Explore vehicles</button>
+        </form>
+     </section>
+      <!--Home section-->
+      <!--icons section-->
+      <section class="icons-container">
+        <div class="icon">
+            <i class="fas fa-home"></i>
+            <div class="content">
+                <h3>50+</h3>
+                <p>branches</p>
+            </div>
+        </div>
+
+        <div class="icon">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>500+</h3>
+                <p>vehicles sold</p>
+            </div>
+        </div>
+
+        <div class="icon">
+            <i class="fas fa-users"></i>
+            <div class="content">
+                <h3>500+</h3>
+                <p>happy clients</p>
+            </div>
+        </div>
+
+        <div class="icon">
+            <i class="fas fa-car"></i>
+            <div class="content">
+                <h3>100+</h3>
+                <p>new models</p>
+            </div>
+        </div>
+      </section>
+      <!--icons section-->
+      <!--vehicles section-->
+      <section class="vehicles" id="vehicles">
+        <h1 class="heading">popular <span>vehicles</span></h1>
+        <div class=" swiper vehicles-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="EV mart/OlA.png" alt="OLA">
+                    <div class="content">
+                        <h3>OLA S1</h3>
+                        <div class="price"><span>price: </span>Rs.99,999/-</div>
+                        <p>
+                           2021 
+                            <span class="fas fa-circle"></span>181 km ARAI certified range
+                            <span class="fas fa-circle"></span>10 stunning colors
+                            <span class="fas fa-circle"></span>116kmph top speed
+                        </p>
+                        <a href="/ola" class="book">view more</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="EV mart/Revolt.png" alt="Revolt">
+                    <div class="content">
+                        <h3>Revolt RV400</h3>
+                        <div class="price"><span>price: </span>Rs.1,30,892/-</div>
+                        <p>
+                            2021
+                            <span class="fas fa-circle"></span>150 km certified range
+                            <span class="fas fa-circle"></span>3 stunning colors
+            
+                            <span class="fas fa-circle"></span>85kmph
+                        </p>
+                        <a href="/revolt" class="book">view more</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="EV mart/Ather.png" alt="Ather">
+                    <div class="content">
+                        <h3>Ather 450</h3>
+                        <div class="price"><span>price: </span>Rs.1,34,147/-</div>
+                        <p>
+                            2022
+                            <span class="fas fa-circle"></span>105 km certified range
+                            <span class="fas fa-circle"></span>3 Stunning colors
+                           
+                            <span class="fas fa-circle"></span>80kmph
+                        </p>
+                        <a href="/ather" class="book">view more</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="EV mart/Hero electric.png" alt="Hero">
+                    <div class="content">
+                        <h3>Hero electric NYX</h3>
+                        <div class="price"><span>price: </span>Rs.86,540/-</div>
+                        <p>
+                            new
+                            <span class="fas fa-circle"></span>138 km certified range
+                            <span class="fas fa-circle"></span>2 Stunning colors
+                            
+                            <span class="fas fa-circle"></span>42kmph
+                        </p>
+                        <a href="/heroelectric" class="book">view more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!--vehicles section-->
+      <!--services section-->
+      <section class="services" id="services">
+        <h1 class="heading">our <span>services</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-person-biking"></i>
+                <h3>vehicle selling</h3>
+                <p>The vehicle from different companies are available. Test drive/Booking option also proided. The vehicles at lowest price also availble. The informationa about the vehicle also provided for the user to read it </p>
+                <!-- <a href="#" class="book">read more</a> -->
+            </div>
+
+            <div class="box">
+                <i class="fas fa-screwdriver-wrench"></i>
+                <h3>parts rework</h3>
+                <p>The parts of the vehicle will be repaired. If any damage in the parts of the vehicle, it will be repaired here. </p>
+                <!-- <a href="#" class="book">read more</a> -->
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-battery"></i>
+                <h3>Battery Replacement</h3>
+                <p>The swaping of the battery is done to continously increasing the range of the vehicle. If battery drains, it will be replaced in station witgh recharged one. </p>
+                <!-- <a href="#" class="book">read more</a> -->
+            </div>
+
+            <div class="box">
+                <i class="fas fa-bolt-lightning"></i>
+                <h3>Circuit checking</h3>
+                <p>Safety is more important while driving especially electric vehicles. Circuit and other components are checked periodidally </p>
+                <!-- <a href="#" class="book">read more</a> -->
+            </div>
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>The servies will support 24/7 without any deviation. The messages and FAQ answers will be done 24/7. The support will be provided without any more delay</p>
+                <!-- <a href="#" class="book">read more</a> -->
+            </div>
+
+            <div class="box">
+                <i class="fas fa-pen"></i>
+                <h3>Latest update</h3>
+                <p>The newly launched vehicles in the market is updated day to day. The News about the Electric vehicles is also availble in services</p>
+                <!-- <a href="#" class="book">read more</a> -->
+            </div>
+        </div>
+      </section>
+       <!--services section-->
+     <!--Newsletter section-->
+    <section class="newsletter">
+        <h3>subscribe for latest updates</h3>
+        <p>Subscribe here to get notify when the new model of the vehicles availble and also intimate the offers, vouchers in the festive season</p>
+        <form id="form1" action="/auth/index1" method="post">
+            <div class="subscribe">
+            <input type="email"  placeholder="enter your mail"  class="box" id="sub-email" name="email" onkeyup="subvalidate()"> 
+            <small id="submission">error message</small>
+        </div>
+       
+            <button type="submit" class="box">Submit</button>
+       
+        </form>
+    </section>
+      <!--Newsletter section-->
+<!--contact section-->
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contact</span> us </h1>
+<div class="row">
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15631.271179725078!2d78.13997832676247!3d11.636329867863711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefd28be50f5f%3A0x7e6b4ce1ec431ebd!2sDadagapatty%2C%20Salem%2C%20Tamil%20Nadu%20636006!5e0!3m2!1sen!2sin!4v1665940013501!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <form id="form2" action="/auth/index2" method="post">
+        <h3>Get-in-touch</Get-in-touch></h3>
+        <div class="touch-control">
+        <input type="text" placeholder="name" class="box" id="user-name" name="username" required>
+        <small id="name-error"></small>
+    </div>
+    <div class="touch-control">
+        <input type="email" placeholder="email" class="box" id="user-email" name="email" required>
+        <small id="email-error"></small>
+    </div>
+    <div class="touch-control">
+        <input type="phonenumber" placeholder="phonenumber" class="box" id="user-phone" name="phone" required>
+        <small id="phone-error"></small>
+    </div>
+    <div class="touch-control">
+        <textarea placeholder="message" class="box" id="user-message" cols="30" rows="10" name="text" required></textarea>
+        <small id="message-error"></small>
+    </div>
+        <button type="submit" class="book">Send message</button>
+    </form>
+</div>
+</section>
+<!--contact section-->
+<!--footer section-->
+<section class="footer">
+    <div class="box-container">
+<div class="box">
+    <h3>our branches</h3>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>india</a>
+        {{!-- <a href="#"><i class="fas fa-map-marker-alt"></i>france</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>africa</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>russia</a> --}}
+</div>
+
+<div class="box">
+    <h3>quick links</h3>
+        <a href="#"><i class="fas fa-arrow-right"></i>home</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>vehicles</a>
+        <a href="#services"><i class="fas fa-arrow-right"></i>services</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>contact</a>
+        <a href="#"><i class="fas fa-arrow-right"></i>information</a>
+</div>
+
+<div class="box">
+    <h3>contact details</h3>
+        <a href="#"><i class="fas fa-phone"></i>+91-7904925991</a>
+        <a href="#"><i class="fas fa-phone"></i>+91-6374505526</a>
+        <a href="mailto:jeevaaravinth2001@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></i>jeevaaravinth2001@gmail.com</a>
+        <a href="mailto:electricveemart@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>electricveemart@gmail.com</a>
+</div>
+
+<div class="box">
+    <h3>Social media</h3>
+        <a href="https://www.facebook.com/profile.php?id=100090281825277&sk=about" target="_blank"><i class="fab fa-facebook-f"></i>Facebook</a>
+        <a href="https://twitter.com/EVMart2023" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
+        <a href="https://www.instagram.com/ev_mart2022" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
+        <a href="https://www.linkedin.com/in/ev-mart-526859265/" target="_blank"><i class="fab fa-linkedin"></i>Linkedin</a>
+        <a href= "mailto:jeevaaravinth2001@gmail.com" target="_blank"></a>
+</div>
+    </div>
+    <div class="credit">
+        created by mr.jeeva aravinth j v | EV Mart
+    </div>
+</section>
+
+<!--footer section-->
+<!-- <script>
+    var preloader=document.getElementById("load");
+   function loading(){
+      preloader.style.display='none';
+   }
+</script> -->
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script >
+
+        const subemail=document.getElementById("sub-email");
+        const valid = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        function subvalidate(){
+            const subval=subemail.value;
+            if(subval==""){
+                subemail.style.border="2px solid red";
+                document.getElementById("submission").innerHTML="Enter Email ID";
+                 document.getElementById("submission").style.color="red";
+        }
+            else if(!valid.test(subemail)){
+                subemail.style.border="2px solid red";
+                document.getElementById("submission").innerHTML="Provide proper mail ID";
+                 document.getElementById("submission").style.color="red";
+            }
+            else{
+                subemail.style.border="2px solid green";
+                document.getElementById("submission").innerHTML="";
+            }
+        }
+
+
+
+        window.onscroll= () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+    }
+    else    {
+        document.querySelector('.header').classList.remove('active');
+    }
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
+window.onload= () =>{
+    if(window.scrollY > 0){
+        document.querySelector('.header').classList.add('active');
+    }
+    else    {
+        document.querySelector('.header').classList.remove('active');
+    }
+}
+
+
+    var swiper = new Swiper(".vehicles-slider", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop:true,
+    grabCursor:true,
+    centeredSlides:true,
+    autoplay:{
+        delay:2500,
+        disableOnInteraction:false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        
+      },
+      800: {
+        slidesPerView: 2,
+        
+      },
+
+      991: {
+        slidesPerView: 3,
+    
+      },
+    },
+  });
+  //slideshow
+
+    </script>
+
+    
+</body>
+</html>

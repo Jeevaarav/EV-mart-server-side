@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform:capitalize;
+    transition: all .2s linear;
+}
+section{
+    padding: 2rem 9%;
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+.book{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--light-yellow);
+    color:var(--black);
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index:100;
+    background:#fff;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem 5%;
+}
+.header .Logo{
+  width:200px;
+  height:80px;
+  cursor: pointer;
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+.login-form{
+    top:-105%;
+    left: 0; height: 100%; width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-form form{
+    padding: 2rem;
+    margin: 20rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+.login-form form .buttons{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+.login-form form .book{
+    display: block;
+    width: 100%;
+    margin:.5rem 0;
+}
+.login-form form h3{
+   color: var(--black);
+   font-size: 2.5rem;
+   padding-bottom:1rem;
+   text-transform: uppercase;
+}
+.login-form form .box{
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border:var(--border);
+    border-radius: .5rem;
+    /* caret-color: lime; */
+}
+
+.login-form form p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+form i {
+    cursor: pointer;
+    color:black;
+    position: relative;
+    top: -30px;
+    left: 140px;
+}
+.form-control{
+    position: relative;
+}
+
+#para.error{
+    color: red;
+}
+#para.good{
+    color: green;
+}
+a{
+    color: var(--yellow);
+    padding: .5rem;
+}
+a:hover{
+    text-decoration: underline;
+}
+.form-control i{
+    font-size: 1.5rem;
+}
+small{
+    visibility: "hidden";
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .header.active{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem 9%;
+    }
+    form i {
+        cursor: pointer;
+        color:black;
+        position: relative;
+      top: -18px;
+        left: 65px;
+    }
+}
+@media(max-width:892px){
+    html{
+        font-size: 45%;
+    }
+    .book{
+        font-size: 1.2rem;
+    }
+    .header .Logo{
+        width:160px;
+        height:70px;
+      }
+    }
+@media(max-width:770px){
+    html{
+        font-size: 45%;
+    }
+    .book{
+        font-size: 0.8rem;
+    }
+    .header .Logo{
+        width:110px;
+        height:60px;
+      }
+}
+@media(max-width:768px){
+    .header #Button i{
+        display:block;
+     }   
+     .header #Button .book{
+        display:none;
+     }   
+    
+
+}
+@media(max-width:580px){
+
+    html{
+        font-size: 35%;
+    }
+.header .Logo{
+    width:100px;
+    height:50px;
+  }
+}
+@media(max-width:450px){
+    html{
+        font-size: 40%;
+    }
+    .book{
+    font-size: 1rem;
+    }
+    .header .Logo{
+        width:100px;
+        height:40px;
+      }
+}
+@media(max-width:440px){
+    html{
+        font-size: 35%;
+    }
+    .book{
+    font-size: 1rem;
+    }
+    .header .Logo{
+        width:100px;
+        height:40px;
+      }
+}
+

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform:capitalize;
+    transition: all .2s linear;
+}
+.book{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--light-yellow);
+    color:var(--black);
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 1.5rem 5%;
+}
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 999;
+    background:#fff;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem 5%;
+}
+.header.active{
+    box-shadow: var(--box-shadow);
+}
+.header .Logo{
+  width:200px;
+  height:80px;
+  cursor: pointer;
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+.header .navbar a:hover{
+    color: var(--yellow);
+}
+.header .book{
+     margin-top: 0;
+} 
+.header #Button i{
+   font-size: 2.5rem;
+   color: var(--light-color);
+   cursor: pointer;
+}
+.navbar li{
+    list-style: none;
+}
+.information li{
+    padding: 0;
+}
+.navbar i{
+    font-size: 1.5rem;
+}
+#menu-btn{
+    font-size: 2.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+    display: none;
+}
+#drop-btn{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    cursor: pointer;
+}
+#drop-btn.fa-times{
+    transform: rotate(180deg);
+}
+
+.heading{
+    text-align: center;
+    padding-bottom:2rem;
+    font-size: 4.5rem;
+    color: var(--black);
+}
+.heading span{
+    position: relative;
+    z-index: 0;
+}
+.heading span::before{
+    content: '';
+    position: absolute;
+    bottom:1rem;left: 0;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    background: var(--yellow);
+    clip-path: polygon(0 90%,100% 80%,100% 100%, 0% 100%);
+}
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(40rem,1fr));
+    gap: 2.5rem;
+    margin: 0.8rem;
+}
+.services .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+}
+.services .box-container .box i{
+    height: 6rem;
+    width:6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color: var(--black);
+    background: var(--yellow);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.services .box-container .box h3{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+.services .box-container .box p{
+    color: var(--light-color);
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+    text-align: justify;
+}
+.services .box-container .box img{
+    width: 350px;
+    height: 300px;
+}
+.footer{
+    background: var(--light-yellow);
+}
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 2.5rem;
+}
+.footer .box-container .box h3{
+    color: var(--black);
+    font-size: 2.2rem;
+    padding: 1rem 0;
+}
+.footer .box-container .box a{
+    color: var(--light-color);
+    font-size:1.4rem;
+    padding: 1rem 0;
+    display: block;
+}
+.footer .box-container .box a i{
+    padding-right: .5rem;
+    color: var(--black);
+}
+.footer .box-container .box a:hover i{
+    padding-right: 2rem;
+}
+.footer .credit{
+    border-top: var(--border);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+#load{
+    background: #fff url("EV mart/spinner.gif") no-repeat center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .header.active{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem 9%;
+    }
+}
+@media(max-width:892px){
+    html{
+        font-size: 45%;
+    }
+    .book{
+        font-size: 1.2rem;
+    }
+    .header .Logo{
+        width:160px;
+        height:70px;
+      }
+    }
+@media(max-width:770px){
+    html{
+        font-size: 45%;
+    }
+    .book{
+        font-size: 0.8rem;
+    }
+    .header .Logo{
+        width:110px;
+        height:60px;
+      }
+}
+@media(max-width:768px){
+    .header #Button i{
+        display:block;
+     }   
+     .header #Button .book{
+        display:none;
+     }   
+    
+
+}
+@media(max-width:580px){
+.header .navbar{
+    position: absolute;
+    top:99%; left:0; right:0;
+    background: #fff;
+    border-top:var(--border);
+    clip-path: polygon(0 0,100% 0, 0 0);
+ }
+ .header .navbar.active{
+    clip-path: polygon(0 0,100% 0,100% 100%, 0% 100%);
+ }
+ .header .navbar a{
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+ }
+ #menu-btn{
+    display: block;
+}
+#menu-btn.fa-times{
+    transform: rotate(180deg);
+}
+.header .Logo{
+    width:100px;
+    height:50px;
+  }
+}
+@media(max-width:450px){
+    html{
+        font-size: 40%;
+    }
+    .book{
+    font-size: 1rem;
+    }
+    .header .Logo{
+        width:100px;
+        height:40px;
+      }
+}

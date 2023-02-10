@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#ffee80;
+    --black:#130f40;
+    --light-color:#666;
+    --border:.1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+}
+*{
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform:capitalize;
+    transition: all .2s linear;
+    font-size: 80%;
+}
+.book{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: var(--light-yellow);
+    color:var(--black);
+    font-weight: 500;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: none;
+}
+.login-form{
+    display: grid;
+    background: rgba(255, 255, 255, 0.9);
+    place-items: center;
+    min-height: 100vh;
+}
+input:focus{
+    outline: none;
+}
+.form-control i{
+    font-size: 1.2rem;
+}
+.form-control small{
+    visibility: "hidden";
+    font-size: 1rem;
+}
+   /* .form-control small {
+      color: red;
+      position: absolute;
+      font-size: 1rem;
+   left: 350px;
+   top: 35px;
+    }
+    .form-control small{
+        visibility:hidden;
+        position: absolute;
+    }
+    .form-control.error small{
+        visibility: visible;
+        color: red;
+    }
+    .form-control.success small{
+        visibility: visible;
+    }
+    small{
+        color: red;
+    } */
+    /* small{
+     visibility: hidden;   
+    } */
+.login-form .link{
+    color: var(--yellow);
+    text-decoration: underline;
+    padding: 0.4rem;
+}
+.login-form form{
+    /* position: absolute;
+    top: 140px;
+    left: 400px; */
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem;
+}
+.login-form form .buttons{
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+.login-form form .book{
+    display: block;
+    width: 100%;
+    margin:.5rem 0;
+}
+.login-form form h3{
+   color: var(--black);
+   font-size: 2.5rem;
+   padding-bottom:1rem;
+   text-transform: uppercase;
+}
+.login-form form .box{
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    border:var(--border);
+    border-radius: .5rem;
+}
+.login-form form p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--light-color);
+}
+
+form i {
+    position: relative;
+    cursor: pointer;
+    color:black;
+    top: -60px;
+    left:200px;
+}
+#para.error{
+    color: red;
+}
+#para.good{
+    color: green;
+}
+
+
+
+
+@media(max-width:1010px){
+    html{
+        font-size: 55%;
+    }
+   .login-form{
+    width: 200px;
+    height: 200px;
+    margin-left: 0px;
+
+   }
+   
+}
+#loading{
+    background: #fff url("EV mart/spinner.gif") no-repeat center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+   .login-form{
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+   }
+   
+}
+@media(max-width:892px){
+    html{
+        font-size: 45%;
+    }
+    .login-form{
+        width: 200px;
+        height: 200px;
+        margin-left: -50px;
+        margin-top: 100px;
+       }
+    
+    }
+@media(max-width:770px){
+    html{
+        font-size: 45%;
+    }
+    .login-form{
+        width: 170px;
+        height: 170px;
+        margin-left: -100px;
+        margin-top: 100px;
+       }
+}
+@media(max-width:770px){
+    html{
+        font-size: 45%;
+    }
+    .login-form{
+        width: 170px;
+        height: 170px;
+        margin-left: -180px;
+        margin-top: 100px;
+       }
+    
+}
+@media(max-width:530px){
+    html{
+        font-size: 45%;
+    }
+    .login-form{
+        width: 170px;
+        height: 170px;
+        margin-left: -320px;
+        margin-top: 100px;
+       }
+    
+}
